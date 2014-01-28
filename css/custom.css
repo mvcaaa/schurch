@@ -1,0 +1,199 @@
+@charset "utf-8";
+/* CSS Document */
+h1 {
+    font-family: "Arial Black";
+    font-size: 16pt;
+    color: #006666
+}
+
+#header {
+    background: #ffffff;
+    overflow: visible;
+    background-image: url(../images/header_bg.jpg);
+    background-repeat: no-repeat;
+    height: 205px;
+    padding-top: 20px;
+    padding-bottom: 0px;
+}
+
+#header_logo {
+    float: left;
+    width: 164px;
+    height: 156px;
+    padding-left: 15px;
+    padding-top: 15px;
+}
+
+#top_slider {
+    overflow: visible;
+    background-image: url(../images/slider_bg_2.jpg);
+    background-repeat: no-repeat;
+    height: 513px;
+    vertical-align: top;
+}
+
+#topmenu {
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    background-image: url(../images/topmenu_left_bg.png), url(../images/topmenu_fill_bg.png), url(../images/topmenu_right_bg.png);
+    background-repeat: no-repeat, repeat-x, no-repeat;
+    background-position: top left, top center, top right;
+    background-origin: border-box, padding-box, border-box;
+    background-clip: border-box, padding-box, border-box;
+    height: 44px;;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 10px 0;
+
+}
+
+li.menu {
+    background-image: -webkit-linear-gradient(bottom, #f2f2f2, #dadada 49%, #fff 50%);
+    background-image: -moz-linear-gradient(bottom, #f2f2f2, #dadada 49%, #fff 50%);
+    background-image: -o-linear-gradient(bottom, #f2f2f2, #dadada 49%, #fff 50%);
+    background-image: linear-gradient(to top, #f2f2f2, #dadada 49%, #fff 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    font-family: MyriadPro;
+    font-size: 21px;
+    font-weight: bold;
+    color: #fff;
+    height: 40px;
+    padding-top: 12px;
+    padding-left: 12px;
+    padding-right: 20px;
+    float: left;
+}
+
+/** Changes background color, height and margin of the border **/
+.top-bar {
+    background: none;
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 0;
+    margin-top: -23px;
+    margin-left: 55px;
+
+}
+
+/** Removes black background on menu bar **/
+.top-bar-section ul {
+    background: none;
+    text-transform: uppercase;
+}
+
+/** Removes black background on menu item **/
+.top-bar-section li a:not(.button) {
+    background: none;
+    line-height: 30px;
+    padding: 0 10px;
+}
+
+/** Changes the active menu item from default black to a gradient **/
+.top-bar-section ul li.active > a {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.7) 100%) repeat scroll 0 0 transparent;
+    color: #fff;
+}
+
+/** Changes the hover state of non active menu items **/
+.top-bar-section li:hover a {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.7) 100%) repeat scroll 0 0 transparent;
+    color: #fff;
+}
+
+/** Changes non active menu items text color to black **/
+.top-bar-section ul li > a {
+    font-family: MyriadPro-Regular, 'Myriad Pro Regular', MyriadPro, 'Myriad Pro', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+}
+
+/** Changes the hover state of dropdown menu items **/
+.top-bar-section ul.dropdown li a:hover:not(.button) {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.9);
+}
+
+/** IMPORTANT fill for the ul dropdown container **/
+.top-bar-section ul.dropdown {
+    background: #333;
+    color: #fff;
+}
+
+/** This fixes the position and the color of the dropdown arrow **/
+.top-bar-section .has-dropdown > a:after {
+    border-color: rgba(255, 255, 255, 1) transparent transparent;
+    margin-top: -11px;
+}
+
+@media only screen and (max-width: 942px) {
+    /* Makes the responsive menu fit in the navigation container and change its background to black */
+    .top-bar ul {
+        background-color: rgba(0, 0, 0, 0.5);
+        padding-bottom: 13px;
+    }
+
+    /* Change non active menu item color to black */
+    .top-bar-section ul li > a {
+        color: #fff;
+    }
+
+    /* Gives the dropdown ul a black fill */
+    .top-bar-section ul {
+        background: #000;
+    }
+
+    /* Give the BACK button after going in a submenu the appropriate filling */
+    .top-bar-section .dropdown li.title h5 a {
+        line-height: 30px;
+    }
+
+    /* This fixes the position and the color of the dropdown arrow */
+    .top-bar-section .has-dropdown > a:after {
+        border-color: rgba(255, 255, 255, 1) transparent transparent;
+        margin-top: -5px;
+    }
+}
+
+#life_block {
+    height: 270px;
+}
+
+#news {
+    background-image: url(../images/news_bg.png);
+    height: 460px;
+    padding-top: 25px;
+}
+
+#photo {
+    padding-top: 25px;
+    height: 240px;
+}
+
+
+#video {
+    padding-top: 25px;
+    height: 240px;
+}
+
+#help {
+    background-image: url(../images/help_bg.jpg);
+    height: 372px;
+    padding-top: 25px;
+    color: #ccffff;
+}
+
+#help h1 {
+    color: #ccffff;
+}
+
+#footer {
+    border-left: 250px solid transparent;
+    border-right: 250px solid transparent;
+    background-image: url(../images/footer_bg_left.jpg), url(../images/footer_bg_center.jpg), url(../images/footer_bg_right.jpg);
+    background-repeat: no-repeat, repeat-x, no-repeat;
+    background-position: top left, top center, top right;
+    background-origin: border-box, padding-box, border-box;
+    background-clip: border-box, padding-box, border-box;
+    height: 216px;
+}
