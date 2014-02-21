@@ -10,7 +10,7 @@ module.exports = function (grunt) {
                 expand: true,
                 cwd: 'css',
                 src: ['*.css'],
-                dest: 'css/build'
+                dest: 'build/css'
             }
         },
         imagemin: {
@@ -22,16 +22,9 @@ module.exports = function (grunt) {
                     {
                         expand: true,
                         cwd: 'images/',
-                        src: ['**/*.jpg'],
+                        src: ['*.jpg'],
                         dest: 'build/images',
                         ext: '.jpg'
-                    },
-                    {
-                        expand: true,
-                        cwd: 'images/',
-                        src: ['**/*.png'],
-                        dest: 'build/images',
-                        ext: '.png'
                     }
                 ]
             }
@@ -43,26 +36,16 @@ module.exports = function (grunt) {
                 renameFiles: true
             },
             css: {
-                options: {
-                },
                 src: [
-                    'build/js/app.min.ec1a70d1.cache.js',
-                    'build/css/app.ae53d279.cache.css',
-                    'build/css/normalize.css' ],
-                dest: 'build/**/*.html'
+                    'build/css/*.css'],
+                dest: 'build/*.html'
             },
             js: {
-                options: {
-                },
                 src: [
-                    'build/js/app.min.ec1a70d1.cache.js',
-                    'build/css/app.ae53d279.cache.css',
-                    'build/css/normalize.css' ],
-                dest: 'build/**/*.html'
+                    'build/js/*.js'],
+                dest: 'build/*.html'
             },
             images: {
-                options: {
-                },
                 src: [
                     'build/**/*.png',
                     'build/**/*.jpg'
@@ -71,16 +54,26 @@ module.exports = function (grunt) {
                     'build/**/*.html',
                     'build/**/*.js',
                     'build/**/*.css',
-                    'build/**/*.md'
                 ]
-            }
-        }
-
+            }},
     });
 
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-hashres');
+
+    grunt.registerTask('cache', [
+        'hashres:css',
+        'hashres:js',
+        'hashres:images'
+     ])
+
+    grunt.registerTask('default', [
+      'clean',
+      'imagemin',
+      'cssmin',
+      'cache'
+]);
 
 };
