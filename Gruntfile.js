@@ -82,5 +82,8 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-hashres');
+    grunt.loadNpmTasks('grunt-check-modules');
+
+    grunt.registerTask('default', ['check-modules']);
 
 };
