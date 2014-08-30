@@ -8,9 +8,11 @@
     <link rel="stylesheet" href="css/foundation.css"/>
     <link rel="stylesheet" href="css/custom.css"/>
 
-    <script src="js/modernizr.js"></script>
-        
-    <script src="js/vendor/custom.modernizr.js"></script>
+    <link rel="stylesheet" href="FlexSlider/flexslider.css"/>
+
+    <!--<script src="js/modernizr.js"></script>-->
+    <!--    -->
+    <!--<script src="js/vendor/custom.modernizr.js"></script>-->
 
 </head>
 <body>
@@ -54,6 +56,34 @@
             </nav>
         </div>
 
+        <div class="slider">
+            <section class="flexslider">
+                <!--<a class="previous disabled" href="#"><img src="images/slider_left.png" alt="previous" width="50" height="50" /></a>-->
+                <!--<a class="next" href="#"><img src="images/slider_right.png" alt="next" width="50" height="50" /></a>-->
+
+                <ul class="slides">
+                    <li>
+                        <img src="images/slider_image_1.jpg">
+                        <p class="flex-caption">Экз жят хабэо нонюмэш патриоквюы, хёз Хёз эа аккюмзан  <BR />
+                            номинави факильизиж, мэя ед вэре вэрыар, эю.</p>
+                    </li>
+                    <li>
+                        <img src="images/slider_image_1.jpg">
+                        <p class="flex-caption">Эю вэл факёльиси дэлььиката факильизиж,<BR /> прё хомэро рыпрэхэндунт эа.</p>
+                    </li>
+                    <li>
+                        <img src="images/slider_image_1.jpg">
+                        <p class="flex-caption">Flexslider by WooThemes.</p>
+                    </li>
+                    <li>
+                        <img src="images/slider_image_1.jpg">
+                        <p class="flex-caption">Flexslider by WooThemes.</p>
+                    </li>
+                </ul>
+            </section>
+
+        </div>
+
     </div>
 </div>
 
@@ -87,7 +117,26 @@
     </div>
 </div>
 
-<script src="js/jquery.js"></script>
+<!--<script src="js/jquery.js"></script>-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="FlexSlider/jquery.flexslider-min.js"></script>
+
+
+<script type="text/javascript">
+    $(window).load(function(){
+        $('.flexslider').flexslider({
+            animation: "slide",
+            directionNav: true,
+            controlNav: true,
+            animationLoop: false,
+            prevText: "",
+            nextText: ""
+//        }).flexsliderManualDirectionControls();
+        });
+
+    });
+</script>
+
 <script src="js/foundation.min.js"></script>
 <script>
     $(document).foundation();
